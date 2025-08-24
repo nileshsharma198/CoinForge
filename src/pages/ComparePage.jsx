@@ -132,6 +132,7 @@ function ComparePage() {
     <div>
       <Header/>
       <SelectCoins/>
+      <SelectDays/>
     </div>
   );
 }
