@@ -1,0 +1,15 @@
+.select-days {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem;
+  padding: 0rem 1rem;
+}
+
+.select-days p {
+  color: var(--grey);
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 500 ;
+}

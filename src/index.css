@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+/* :root{
+  --white: #fff;
+  --black: #111;
+  --orange: #e35e00;
+  --grey: 	#999999;
+  --green: #61c96f;
+  --red: #f94141;
+  --darkgrey: #1b1b1b;
+} */
+
+:root {
+  --orange: #FF6A00;
+  --black: #0F0F0F;
+  --white: #FFFFFF;
+  --darkgrey: #1b1a1a;
+  --green: #00D98C;
+  --red: #FF3B30;
+  --grey: #bebebe;
+}
+
+body {
+  margin: 0;
+  background-color: var(--black);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Prompt", sans-serif;
+}
+
+/* custom selection color */
+::selection{
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+/* custom scroll-bar */
+/* width */
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--darkgrey);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--orange);
+  border-radius: 3rem;
+}
+
+a{
+  color: var(--white) !important;
+  text-decoration: none;
+}
+
+/* Disable image dragging */
+img {
+  -webkit-user-drag: none; /* For WebKit browsers (Chrome, Safari) */
+  -khtml-user-drag: none;  /* For older Konqueror browsers */
+  -moz-user-drag: none;   /* For Mozilla Firefox */
+  -o-user-drag: none;     /* For Opera */
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.grey-wrapper{
+  display: block;
+  width: 94%;
+  background-color: var(--darkgrey);
+  margin: 1.5rem auto;
+  border-radius: 1rem;
+  padding: 1rem 1rem;
+  /* pointer-events: none; */
+} 
+
+.coins-days-flex{
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1.5rem;
+  /* border: 1px solid var(--orange) ;
+  border-radius: 8px; */
+}

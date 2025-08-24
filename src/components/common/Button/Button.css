@@ -1,0 +1,47 @@
+.btn {
+  background-color: var(--orange);
+  color: var(--white);
+  padding: 0.5rem 1.5rem;
+  border-radius: 3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  min-width: 100px;
+  text-transform: capitalize;
+  border: 2px solid var(--orange);
+}
+
+.btn:hover {
+  box-shadow: 2px 2px 20px rgba(255, 106, 0, 0.8);
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-outlined {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 0.5rem 1.5rem;
+  border-radius: 3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  min-width: 100px;
+  text-transform: capitalize;
+  border: 2px solid var(--orange);
+}
+
+.btn-outlined:hover {
+  background-color: var(--orange);
+  box-shadow: 2px 2px 20px rgba(255, 106, 0, 0.8);
+  transition: all 0.3s;
+}
+
+@media only screen and (max-width: 800px) {
+  .btn,
+  .btn-outlined {
+    font-size: 0.8rem;
+  }
+}

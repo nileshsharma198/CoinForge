@@ -1,0 +1,283 @@
+
+.flex-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.5rem 3rem;
+}
+
+.track-crypto-heading,.real-time-heading {
+    font-size: 7rem;
+    margin: 0px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.track-crypto-heading{
+    color: var(--white);
+  /* Prefix required. Even Firefox only supports the -webkit- prefix */
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: var(--white);
+}
+
+.track-crypto-heading:hover{
+    color: var(--black);
+    -webkit-text-stroke-color: var(--orange);
+    transition: all 0.3s ease-in-out;
+}
+
+.real-time-heading{
+    color: var(--orange);
+}
+
+.info-text{ 
+    font-size: 1rem;
+    color: var(--grey);
+}
+
+.button-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.right-component {
+    width: 50%;
+    position: relative;
+    padding: 1rem;
+}
+
+.iphone{
+    position : absolute;
+    z-index: 100;
+    min-width: 300px;
+    width: 50%;
+    right: 0;
+}
+
+.gradient{
+    position: absolute;
+    min-width: 250px;
+    width: 40%;
+    right: 0;
+    top: 6rem;
+}
+
+@media only screen and (max-width: 1250px) {
+  .track-crypto-heading,
+  .real-time-heading{
+    font-size: 5rem;
+  }
+  .track-crypto-heading{
+    color: var(--white);
+  /* Prefix required. Even Firefox only supports the -webkit- prefix */
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: var(--white);
+}
+
+.track-crypto-heading:hover{
+    color: var(--black);
+    -webkit-text-stroke-color: var(--orange);
+    transition: all 0.3s ease-in-out;
+}
+}
+
+@media only screen and (max-width: 1050px) {
+  .track-crypto-heading,
+  .real-time-heading {
+    font-size: 4rem;
+    font-weight: 400;
+  }
+
+  .gradient {
+    right: 0px;
+    top: 60px;
+    width: 200px;
+  }
+  .iphone {
+    right: 0px;
+    width: 250px;
+  }
+  .track-crypto-heading{
+    color: var(--white);
+  /* Prefix required. Even Firefox only supports the -webkit- prefix */
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: var(--white);
+}
+
+.track-crypto-heading:hover{
+    color: var(--black);
+    -webkit-text-stroke-color: var(--orange);
+    transition: all 0.3s ease-in-out;
+}
+}
+
+@media only screen and (max-width: 900px) {
+  .track-crypto-heading{
+    color: var(--white);
+  /* Prefix required. Even Firefox only supports the -webkit- prefix */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--white);
+}
+
+.track-crypto-heading:hover{
+    color: var(--black);
+    -webkit-text-stroke-color: var(--orange);
+    transition: all 0.3s ease-in-out;
+}
+  .track-crypto-heading,
+  .real-time-heading {
+    font-size: 2rem;
+    font-weight: 250;
+  }
+  .flex-info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .track-crypto-heading,
+  .real-time-heading,
+  .info-text {
+    text-align: left;
+  }
+
+  .info-text {
+    font-size: 0.8rem;
+  }
+
+  .right-component{
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+  }
+   .gradient {
+    right: 10px;
+    top: 60px;
+    width: 180px;
+  }
+  .iphone {
+    right: 20px;
+    width: 250px;
+  }
+  .button-container {
+    margin: auto;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+  
+}
+
+
+@media only screen and (max-width: 600px) {
+  .track-crypto-heading,
+  .real-time-heading {
+    font-size: 2rem;
+    font-weight: 200;
+  }
+  .flex-info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .track-crypto-heading,
+  .real-time-heading,
+  .info-text {
+    text-align: left;
+  }
+
+  .info-text {
+    font-size: 0.8rem;
+  }
+
+  .right-component{
+    display: block;
+    margin: auto;
+    margin-top: 3rem;
+  }
+   .gradient {
+    right: -40px;
+    top: 60px;
+    width: 180px;
+  }
+  .iphone {
+    right: -35px;
+    width: 250px;
+  }
+  .button-container {
+    margin: auto;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+  .track-crypto-heading{
+    color: var(--white);
+  /* Prefix required. Even Firefox only supports the -webkit- prefix */
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: var(--white);
+}
+
+.track-crypto-heading:hover{
+    color: var(--black);
+    -webkit-text-stroke-color: var(--orange);
+    transition: all 0.3s ease-in-out;
+}
+}
+
+@media only screen and (max-width: 400px) {
+  .track-crypto-heading,
+  .real-time-heading {
+    font-size: 2rem;
+    font-weight: 200;
+  }
+  .flex-info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .track-crypto-heading,
+  .real-time-heading,
+  .info-text {
+    text-align: left;
+  }
+
+  .info-text {
+    font-size: 0.8rem;
+  }
+
+  .right-component{
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+  }
+   .gradient {
+    right: -70px;
+    top: 60px;
+    width: 180px;
+  }
+  .iphone {
+    right: -80px;
+    width: 250px;
+  }
+  .button-container {
+    margin: auto;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+  .track-crypto-heading{
+    color: var(--white);
+  /* Prefix required. Even Firefox only supports the -webkit- prefix */
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: var(--white);
+}
+
+.track-crypto-heading:hover{
+    color: var(--black);
+    -webkit-text-stroke-color: var(--orange);
+    transition: all 0.3s ease-in-out;
+}
+}
+

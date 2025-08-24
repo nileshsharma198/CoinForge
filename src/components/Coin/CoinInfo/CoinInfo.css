@@ -1,0 +1,24 @@
+.grey-wrapper h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-top: 1rem ;
+  padding-left: 1rem;
+}
+
+.coin-info-desc{
+  padding-top: 0.8rem ;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+  text-align: justify;
+  cursor: pointer !important ;
+}
+
+.coin-info-desc a{
+  color: var(--orange) !important;
+  text-decoration: underline !important;
+}
+
+.coin-info-desc p{
+  cursor: pointer;
+}

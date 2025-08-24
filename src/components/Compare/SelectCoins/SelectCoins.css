@@ -1,0 +1,19 @@
+.coin-flex {
+  display: flex;
+  gap: 2rem; /* space between coin1, coin2, and days selector */
+  align-items: center; /* align vertically in a row */
+  /* margin: 1.5rem; */
+  margin-left: 1.5rem;
+  
+}
+
+.coin-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.coin-label {
+  color: var(--grey);
+  font-weight: 500;
+}

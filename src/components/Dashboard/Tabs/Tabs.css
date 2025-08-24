@@ -1,0 +1,53 @@
+.grid-flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1.5rem 1rem;
+
+}
+.list-table{
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+/* Optional: Better spacing between rows */
+/* .list-table tr {
+  border-bottom: 1px solid var(--darkgrey);
+} */
+
+/* ----------- Responsive Breakpoints for List View ----------- */
+
+/* Large desktop screens */
+@media (max-width: 1600px) {
+  .list-table {
+    width: 92%;
+  }
+}
+
+/* Below 1390px */
+@media (max-width: 1390px) {
+  .list-table {
+    width: 94%;
+  }
+}
+
+/* Below 1050px: allow table to be more fluid */
+@media (max-width: 1050px) {
+  .list-table {
+    width: 96%;
+  }
+}
+
+/* Mobile: make table full-width */
+@media (max-width: 768px) {
+  .list-table {
+    width: 100%;
+  }
+  .list-table tr {
+    border-bottom: none; /* cleaner card look */
+  }
+}
