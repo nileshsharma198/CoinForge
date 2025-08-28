@@ -5,34 +5,56 @@ import { Chart as ChartJS } from 'chart.js/auto';
 import { convertNumber } from '../../../functions/convertNumber';
 
 function LineChart({ chartData, priceType, multiAxis }) {
-
-    const options = {
-        plugins:{
-            legend: {
-                display: multiAxis ? true : false,
-            }
-        },
-        responsive: true,
-        Interaction :{
-            mode: "index",
-            intersect: false
-        },
-        scales: {
-            y: {
-                ticks:{
-                    callback: function (value, index, ticks){
-                        if (priceType == "prices")
-                            return "$" + value.toLocaleString();
-                        else {
-                            return "$" + convertNumber(value);
-                        }
-                    }
-                }
-            }
+  const options = {
+    plugins: {
+      legend: {
+        display: multiAxis ? true : false,
+      },
+    },
+    responsive: true,
+    interaction: {  // ⚡ fix capitalization (was Interaction)
+      mode: "index",
+      intersect: false,
+    },
+    scales: multiAxis
+      ? {
+          y1: {
+            type: "linear",
+            display: true,
+            position: "left",
+            ticks: {
+              callback: function (value) {
+                if (priceType === "prices") return "$" + value.toLocaleString();
+                return "$" + convertNumber(value);
+              },
+            },
+          },
+          y2: {
+            type: "linear",
+            display: true,
+            position: "right",
+            grid: { drawOnChartArea: false }, // avoid overlapping
+            ticks: {
+              callback: function (value) {
+                if (priceType === "prices") return "$" + value.toLocaleString();
+                return "$" + convertNumber(value);
+              },
+            },
+          },
         }
-    };
+      : {
+          y: {
+            ticks: {
+              callback: function (value) {
+                if (priceType === "prices") return "$" + value.toLocaleString();
+                return "$" + convertNumber(value);
+              },
+            },
+          },
+        },
+  };
 
-  return <Line data={chartData} options={options}/>;
+  return <Line data={chartData} options={options} />;
 }
 
-export default LineChart
+export default LineChart;

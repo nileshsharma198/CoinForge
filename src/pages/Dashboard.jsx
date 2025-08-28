@@ -25,6 +25,7 @@ function DashboardPage() {
 
   const onSearchChange = (e) => {
     setSearch(e.target.value);
+    console.log("Hiii");
   };
 
   // Filter + Sort
