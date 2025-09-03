@@ -1,18 +1,32 @@
-import { Interaction, Legend, plugins, scales } from 'chart.js';
-import React from 'react';
-import { Line } from 'react-chartjs-2';
-import { Chart as ChartJS } from 'chart.js/auto';
-import { convertNumber } from '../../../functions/convertNumber';
+import { Interaction, Legend, plugins, scales } from "chart.js";
+import React from "react";
+import { Line } from "react-chartjs-2";
+import { Chart as ChartJS } from "chart.js/auto";
+import { convertNumber } from "../../../functions/convertNumber";
 
 function LineChart({ chartData, priceType, multiAxis }) {
+  // ✅ shared formatter for all ticks
+  const formatTick = (value) => {
+    const num = Number(value);
+
+    if (num >= 1000) {
+      let formatted = convertNumber(num);
+      // remove trailing ".00" (e.g., 108.00K → 108K)
+      formatted = formatted.replace(/\.00/, "");
+      return "$" + formatted;
+    }
+
+    return "$" + num.toLocaleString();
+  };
+
   const options = {
     plugins: {
       legend: {
-        display: multiAxis ? true : false,
+        display: multiAxis, // shorter syntax
       },
     },
     responsive: true,
-    interaction: {  // ⚡ fix capitalization (was Interaction)
+    interaction: {
       mode: "index",
       intersect: false,
     },
@@ -22,34 +36,19 @@ function LineChart({ chartData, priceType, multiAxis }) {
             type: "linear",
             display: true,
             position: "left",
-            ticks: {
-              callback: function (value) {
-                if (priceType === "prices") return "$" + value.toLocaleString();
-                return "$" + convertNumber(value);
-              },
-            },
+            ticks: { callback: formatTick },
           },
           y2: {
             type: "linear",
             display: true,
             position: "right",
-            grid: { drawOnChartArea: false }, // avoid overlapping
-            ticks: {
-              callback: function (value) {
-                if (priceType === "prices") return "$" + value.toLocaleString();
-                return "$" + convertNumber(value);
-              },
-            },
+            grid: { drawOnChartArea: false },
+            ticks: { callback: formatTick },
           },
         }
       : {
           y: {
-            ticks: {
-              callback: function (value) {
-                if (priceType === "prices") return "$" + value.toLocaleString();
-                return "$" + convertNumber(value);
-              },
-            },
+            ticks: { callback: formatTick },
           },
         },
   };

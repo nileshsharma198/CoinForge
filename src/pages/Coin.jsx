@@ -67,9 +67,14 @@ function CoinPage() {
               priceType={priceType}
               handlePriceTypeChange={handlePriceTypeChange}
             />
-            <LineChart chartData={chartData} priceType={priceType}/>
+            
+            <LineChart
+              chartData={chartData}
+              priceType={priceType}
+              multiAxis={chartData.datasets.length > 1}
+            />
           </div>
-            <BackToTop/>
+          <BackToTop />
           <CoinInfo heading={coinData.name} desc={coinData.desc} />
         </>
       ) : error ? (
@@ -84,4 +89,5 @@ function CoinPage() {
 }
 
 export default CoinPage;
+
 

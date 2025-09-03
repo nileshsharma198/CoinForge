@@ -195,7 +195,7 @@ export const SettingChartData = (
       fill: false,
       tension: 0.25,
       pointRadius: 2,
-      yAxisID: "y1",
+      yAxisID: prices2 ? "y1" : "y",
     },
   ];
 
