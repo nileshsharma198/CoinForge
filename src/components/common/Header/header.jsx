@@ -25,7 +25,7 @@ function Header() {
       <div className="links">
         <Link to="/"><p className="link">Home</p></Link>
         <Link to="/Compare"><p className="link">Compare</p></Link>
-        <Link to="/Watchlist"><p className="link">Watchlist</p></Link>
+        {/* <Link to="/Watchlist"><p className="link">Watchlist</p></Link> */}
         <Link to="/Dashboard">
           <Button text={"Dashboard"} /> 
         </Link>

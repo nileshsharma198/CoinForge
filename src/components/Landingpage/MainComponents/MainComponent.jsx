@@ -4,6 +4,8 @@ import Button from "../../common/Button/Button";
 import iphone from "../../../assets/iphone.png";
 import gradient from "../../../assets/gradient.png";
 import { motion } from "framer-motion";
+import Share from "../../common/ShareButton/Share";
+import ShareRoundedIcon from '@mui/icons-material/ShareRounded';
 
 
 function MainComponent() {
@@ -44,17 +46,9 @@ function MainComponent() {
           <a href="/dashboard">
             <Button text={"Dashboard"} />
           </a>
-          <Button text="🔗 Share App" outlined={true} />
-          {/* <RWebShare
-            data={{
-              text: "🚀 Check out this Crypto Dashboard built with React!",
-              url: window.location.href, // dynamically uses current page URL
-              title: "Crypto Dashboard",
-            }}
-            onClick={() => console.log("shared successfully!")}
-          >
-            <Button text="🔗 Share App" outlined={true} />
-          </RWebShare> */}
+          
+        <Share outlined={true} Icon={ShareRoundedIcon} text="Share" />
+          
         </motion.div>
       </div>
 
