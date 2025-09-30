@@ -10,7 +10,7 @@ function HomePage() {
     <main>
       <MainComponent/>
     </main>
-    {/* <Footer/> */}
+   
     </div>
   )
 }
