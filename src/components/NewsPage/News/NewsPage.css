@@ -1,0 +1,150 @@
+/* Container */
+.news-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+/* Title */
+.news-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ff6f00; /* 🔥 CoinForge Orange */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.news-title:hover {
+  color: #ff8800;
+}
+
+/* Toggle Buttons */
+.view-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.view-toggle button {
+  padding: 0.6rem 1.2rem;
+  border: 2px solid #ff6f00;
+  background: transparent;
+  color: #ff6f00;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.view-toggle button.active,
+.view-toggle button:hover {
+  background: #ff6f00;
+  color: white;
+}
+
+/* Grid (2 columns only) */
+.grid-view {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ✅ Only 2 per row */
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .grid-view {
+    grid-template-columns: 1fr; /* Mobile → single column */
+  }
+}
+
+/* List view */
+.list-view {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Load More Button */
+.load-more-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.load-more-btn {
+  padding: 0.8rem 1.6rem;
+  background: #ff6f00;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.load-more-btn:hover {
+  background: #ff8800;
+}
+
+
+/* Header with flex: title left, buttons right */
+.news-header {
+  display: flex;
+  justify-content: space-between; /* ✅ spread them apart */
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.news-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ff6f00; /* CoinForge Orange */
+  margin: 0; /* removes default spacing */
+}
+
+
+
+/* Reduce heading size on small screens */
+@media (max-width: 480px) {
+  .news-title {
+    font-size: 1.4rem; /* smaller font on phones */
+  }
+}
+
+
+
+.news-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #ff6f00;                /* default CoinForge Orange */
+  position: relative;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;   /* smooth color change */
+  cursor: default;
+}
+
+/* Animated underline */
+.news-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;                       /* start at 0 */
+  height: 4px;
+  background: #ff6f00;
+  border-radius: 2px;
+  transition: width 0.4s ease, background 0.3s ease;
+}
+
+/* Hover effect: color + underline animation */
+.news-title:hover {
+  color: #ffffff;                 /* text turns white */
+}
+
+.news-title:hover::after {
+  width: 100%;                    /* underline expands */
+  background: #ffffff;            /* underline turns white */
+}

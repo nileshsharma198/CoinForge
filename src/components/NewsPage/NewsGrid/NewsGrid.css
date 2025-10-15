@@ -1,0 +1,106 @@
+.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 28px;
+  padding: 24px 0;
+}
+
+.news-grid-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  background: linear-gradient(145deg, var(--black), var(--darkgrey));
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  min-height: 460px;
+}
+
+.news-grid-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+.news-grid-image {
+  width: 100%;
+  height: 50%; /* ✅ half card = image */
+  object-fit: cover;
+}
+
+/* Content part */
+.news-grid-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 20px;
+  justify-content: space-between;
+}
+
+/* Top row: date + site */
+.news-grid-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.news-grid-date {
+  font-size: 13px;
+  color: var(--grey);
+  font-weight: 500;
+}
+
+.news-grid-site {
+  font-size: 15px;
+  color: var(--grey);
+  font-weight: 500;
+}
+
+/* Title */ 
+.news-grid-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  color: var(--orange);
+}
+
+/* Description */
+.news-grid-description {
+  font-size: 15px;
+  color: var(--white);
+  opacity: 0.9;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;   /* ✅ only 2–3 lines */
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Read more link */
+.news-grid-readmore {
+  text-align: right;
+}
+
+.news-grid-readmore a {
+  font-size: 16px;
+  color: var(--grey) !important;       /* default grey */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.news-grid-readmore a:hover {
+  color: var(--orange) !important;      /* hover orange */
+}
+
+/* adding hover to news card */
+.news-grid-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  border: 2px solid var(--orange); /* ✅ only added orange border */
+}

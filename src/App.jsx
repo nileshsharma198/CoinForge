@@ -4,6 +4,8 @@ import HomePage from "./pages/Home";
 import DashboardPage from "./pages/Dashboard";
 import CoinPage from "./pages/Coin";
 import ComparePage from "./pages/ComparePage";
+import NewsPage from "./pages/News";
+
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
           <Route path="/Dashboard" element={<DashboardPage />} />
           <Route path="/coin/:id" element={<CoinPage />} />
           <Route path="/compare" element={<ComparePage />} />
+          <Route path="/news" element={<NewsPage/>} />
           {/* <Route path="/watchlist" element={<WatchlistPage />} /> */}
         </Routes>
       </BrowserRouter>
