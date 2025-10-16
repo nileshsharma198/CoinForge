@@ -119,3 +119,102 @@
     font-size: 0.95rem;
   }
 }
+
+
+/* ---------- Mobile card styles (used when window.width < 768px) ---------- */
+.mobile-coin-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  background: var(--darkgrey);
+  color: var(--grey);
+  border-radius: 10px;
+  padding: 0.85rem;
+  margin: 0.6rem 0;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* top row: logo + name + small icon */
+.mobile-card-top {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mobile-coin-meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.mobile-coin-title .coin-symbol {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.mobile-coin-sub {
+  font-size: 0.85rem;
+  color: var(--grey);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* change icon area */
+.mobile-change-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* middle: % change + price */
+.mobile-card-middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-price-change {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.mobile-price-change.green {
+  color: var(--green);
+}
+
+.mobile-price-change.red {
+  color: var(--red);
+}
+
+.mobile-price {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+/* bottom: volume + marketcap */
+.mobile-card-bottom {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--grey);
+}
+
+.mobile-stat small {
+  display: block;
+  opacity: 0.7;
+  font-size: 0.75rem;
+}
+
+/* ensure desktop table remains as-is */
+@media (min-width: 768px) {
+  .mobile-coin-card,
+  .mobile-card-top,
+  .mobile-card-middle,
+  .mobile-card-bottom {
+    display: none;
+  }
+}
